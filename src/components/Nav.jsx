@@ -6,19 +6,19 @@ export default function Nav() {
     <nav>
       <ul>
         <li>
-          <Link to="html">HTML</Link>
+          <Link to="/html">HTML</Link>
         </li>
         <li>
-          <Link to="css">CSS</Link>
+          <Link to="/css">CSS</Link>
         </li>
         <li>
-          <Link to="javascript">Javascript</Link>
+          <Link to="/javascript">JavaScript</Link>
         </li>
         <li>
-          <Link to="react">React</Link>
+          <Link to="/react">React</Link>
         </li>
         <li>
-          <Link to="sanityandcms">Sanity and headless CMS</Link>
+          <Link to="/sanityandcms">Sanity and headless CMS</Link>
         </li>
       </ul>
     </nav>
