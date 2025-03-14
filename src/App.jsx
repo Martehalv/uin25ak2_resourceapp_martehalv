@@ -4,11 +4,11 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Layout from "./components/Layout";
 import Resources from "./components/Resources";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Layout>
         <Routes>
           <Route path="/html" element={<Resources category={"html"} />} />
@@ -24,7 +24,7 @@ function App() {
           />
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </Router>
   );
 }
 
