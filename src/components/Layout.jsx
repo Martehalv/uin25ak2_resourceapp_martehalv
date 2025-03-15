@@ -1,16 +1,16 @@
 import Nav from "./Nav";
 import "../styles/layout.scss";
-import Resources from "./Resources";
-import resources from "./ressurser";
-import PageTitle from "./PageTitle";
+import { Outlet } from "react-router-dom";
 
-export default function Layout() {
+export default function Layout({ children }) {
   return (
     <>
       <header>
         <Nav />
       </header>
-      <main></main>
+      <main>
+        <section>{children}</section>
+      </main>
     </>
   );
 }

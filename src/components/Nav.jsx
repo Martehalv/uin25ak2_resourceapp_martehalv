@@ -18,7 +18,7 @@ export default function Nav() {
           <Link to="/react">React</Link>
         </li>
         <li>
-          <Link to="/sanityandcms">Sanity and headless CMS</Link>
+          <Link to="/sanity">Sanity and headless CMS</Link>
         </li>
       </ul>
     </nav>

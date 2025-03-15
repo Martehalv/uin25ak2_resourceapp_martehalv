@@ -1,33 +1,28 @@
 import resources from "../components/ressurser";
-import { useParams } from "react-router-dom";
 import "../styles/layout.scss";
 
-export default function Resources() {
-  const { category } = useParams();
-  console.log("Category from URL:", category);
-  console.log("All resources:", resources);
-
+export default function Resources({ category }) {
+  // Filtrer ressurser basert på prop-en
   const filteredResources = resources.filter(
-    (resource) => resource.category === category
+    (res) => res.category === category
   );
-  console.log("Filtered resources:", filteredResources);
 
   return (
     <section>
-      <h1>{category.toUpperCase()} Resources</h1>
-      {filteredResources.length > 0 ? (
-        <ul>
-          {filteredResources.map((resource, index) => (
+      <h2>Ressurser for {category.toUpperCase()}</h2>
+      <ul>
+        {filteredResources.length > 0 ? (
+          filteredResources.map((res, index) => (
             <li key={index}>
-              <a href={resource.url} target="_blank" rel="noopener noreferrer">
-                {resource.title}
+              <a href={res.url} target="_blank" rel="noopener noreferrer">
+                {res.title}
               </a>
             </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No resources found for this category.</p>
-      )}
+          ))
+        ) : (
+          <p>Ingen ressurser funnet for denne kategorien.</p>
+        )}
+      </ul>
     </section>
   );
 }
