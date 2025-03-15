@@ -2,21 +2,19 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function PageTitle() {
-  const location = useLocation(); // Henter gjeldende URL-path
+  const CorrectTitle = useLocation();
 
-  // Lager en mapping mellom paths og titler
-  const titles = {
-    "/html": "HTML Resources",
-    "/css": "CSS Resources",
-    "/javascript": "JavaScript Resources",
-    "/react": "React Resources",
-    "/sanity": "Sanity & Headless CMS Resources",
+  const ResourcesNames = {
+    "/html": "HTML Ressurser",
+    "/css": "CSS Ressurser",
+    "/javascript": "JavaScript Ressurser",
+    "/react": "React Ressurser",
+    "/sanity": "Sanity & Headless CMS Ressurser",
   };
 
   useEffect(() => {
-    // Oppdaterer dokumentets tittel basert på URL-path
-    document.title = titles[location.pathname] || "Resources App";
-  }, [location]);
+    document.title = ResourcesNames[CorrectTitle.pathname] || "Ressursarkiv";
+  }, [CorrectTitle]);
 
   return null;
 }

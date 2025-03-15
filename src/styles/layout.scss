@@ -23,6 +23,7 @@ header {
       cursor: pointer;
     }
 
+    //Vet ikke hva jeg gjør feil, men :active fungerer ikke.
     li:active {
       background-color: #fff;
       color: #2a324b;
@@ -48,5 +49,9 @@ main {
     font-family: "Montserrat", serif;
     margin-left: 2rem;
     padding: 1.4rem 0;
+
+    a {
+      text-decoration: underline;
+    }
   }
 }
