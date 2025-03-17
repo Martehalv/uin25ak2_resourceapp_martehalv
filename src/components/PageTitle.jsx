@@ -5,11 +5,11 @@ export default function PageTitle() {
   const CorrectTitle = useLocation();
 
   const ResourcesNames = {
-    "/html": "HTML Ressurser",
-    "/css": "CSS Ressurser",
-    "/javascript": "JavaScript Ressurser",
-    "/react": "React Ressurser",
-    "/sanity": "Sanity & Headless CMS Ressurser",
+    "/html": "HTML Ressursarkiv",
+    "/css": "CSS Ressursarkiv",
+    "/javascript": "JavaScript Ressursarkiv",
+    "/react": "React Ressursarkiv",
+    "/sanity": "Sanity & Headless CMS Ressursarkiv",
   };
 
   useEffect(() => {

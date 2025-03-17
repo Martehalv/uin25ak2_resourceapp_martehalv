@@ -2,7 +2,12 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Layout from "./components/Layout";
 import Resources from "./components/Resources";
 import PageTitle from "./components/PageTitle";
@@ -13,6 +18,7 @@ function App() {
       <PageTitle />
       <Layout>
         <Routes>
+          <Route path="/" element={<Navigate to="/html" />} />
           <Route path="/html" element={<Resources category="html" />} />
           <Route path="/css" element={<Resources category="css" />} />
           <Route
